@@ -6,10 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Solution solution = new Solution();
+        Solution_HashMap solution = new Solution_HashMap();
 
         int[] result = solution.twoSum(
-                new int[]{3, 2, 4},
+                new int[]{3, 2, 3},
                 6
         );
 

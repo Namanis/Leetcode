@@ -3,8 +3,8 @@ Leetcode problem solutions
 
 ## Progress
 
-- Total solved: X
-- Easy: X
-- Medium: X
-- Hard: X
+- Total solved: 0
+- Easy: 4
+- Medium: 0
+- Hard: 0
 

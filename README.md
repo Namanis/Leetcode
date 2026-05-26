@@ -5,6 +5,6 @@ Leetcode problem solutions
 
 - Total solved: 0
 - Easy: 6
-- Medium: 0
+- Medium: 1
 - Hard: 0
 

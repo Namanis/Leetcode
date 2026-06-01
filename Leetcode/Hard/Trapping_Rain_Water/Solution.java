@@ -1,6 +1,5 @@
 package Leetcode.Hard.Trapping_Rain_Water;
 
-import java.util.Stack;
 
 public class Solution {
     public int trap(int[] height) {

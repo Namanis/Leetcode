@@ -3,10 +3,11 @@ Leetcode problem solutions
 
 ## Progress
 
-- Total solved: 24
-- Easy: 14
-- Medium: 8
+- Total solved: 31
+- Easy: 17
+- Medium: 12
 - Hard: 2
+
 
 
 

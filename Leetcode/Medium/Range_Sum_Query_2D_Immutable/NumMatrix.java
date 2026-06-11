@@ -1,0 +1,23 @@
+package Leetcode.Medium.Range_Sum_Query_2D_Immutable;
+
+import java.util.Arrays;
+
+public class NumMatrix {
+
+    private int[][] matrix;
+
+    public NumMatrix(int[][] matrix) {
+        this.matrix = matrix;
+    }
+
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        int sum = 0;
+        for (int i = row1; i <= row2; i++) {
+            for (int j = col1; j <= col2; j++) {
+                sum += matrix[i][j];
+            }
+        }
+       // System.err.println(Arrays.deepToString(matrix));
+        return sum;
+    }
+}

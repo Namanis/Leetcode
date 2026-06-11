@@ -9,16 +9,19 @@ import java.util.Map;
 public class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
 
-        Map<String, List<String>> result = new HashMap<>();
-        for (String s : strs) {
-            char[] charrArray = s.toCharArray();
-            Arrays.sort(charrArray);
-            String sortedS = new String(charrArray);
-            result.putIfAbsent(sortedS, new ArrayList<>());
-            result.get(sortedS).add(s);
-        }
+        Map<String, List<String>> resMap = new HashMap<>();
 
-        return new ArrayList<>(result.values());
+        for (String str : strs) {
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String sorted = new String(chars);
+            System.out.println(sorted);
+
+            resMap.putIfAbsent(sorted, new ArrayList<>());
+            resMap.get(sorted).add(str);
+        }
+        System.out.println(resMap.values());
+        return new ArrayList<>(resMap.values());
     }
 
 }

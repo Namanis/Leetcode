@@ -2,28 +2,29 @@ package Leetcode.Easy.Longest_Common_Prefix;
 
 public class Solution {
     public String longestCommonPrefix(String[] strs) {
+        // HashSet<Character> prefixHashSet = new HashSet<>();
 
-        int min = strs[0].length();
-        String result = "";
+        String prefix = strs[0];
 
-        for (int i = 0; i < strs.length; i++) {
-            if (strs.length == 1) {
-                return strs[i];
-            }
-            min = Math.min(min, strs[i].length());
-        }
+        for (int i = 1; i < strs.length; i++) {
+            char[] nextChar = strs[i].toCharArray();
 
-        for (int i = 0; i < min; i++) {
-            int index = 0;
-            for (int j = 0; j < strs.length - 1; j++) {
-                if (strs[j].charAt(i) == strs[j + 1].charAt(i)) {
-                    index++;
-                } else {
-                    return result;
+            if(strs[i].isEmpty()) return "";
+
+            for (int j = 0; j < Math.min(prefix.length(), strs[i].length()); j++) {
+                if (prefix.charAt(j) != nextChar[j]) {
+                    prefix = prefix.substring(0, j);
+                    if (prefix.isEmpty())
+                        return "";
+                    break;
+                }else{
+                    if(j == Math.min(prefix.length(), strs[i].length())-1){
+                        prefix = prefix.substring(0, j+1);
+                    }
                 }
             }
-            result += String.valueOf(strs[index].charAt(i));
         }
-        return (result);
+
+        return prefix;
     }
 }
